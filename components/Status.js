@@ -1,6 +1,13 @@
 const React = require('react');
 
-const Status = ({ winner }) =>
-  <div></div>;
+class Status extends React.Component {
+  render () {
+    const { winner } = this.props;
+    return (
+      <div>
+      </div>
+    );
+  }
+}
 
 module.exports = Status;

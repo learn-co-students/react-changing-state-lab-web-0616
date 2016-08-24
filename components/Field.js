@@ -1,7 +1,13 @@
 const React = require('react');
 
-const Field = ({ player, onClick }) =>
-  <button>
-  </button>;
+class Field extends React.Component {
+  render () {
+    const { player, onClick } = this.props;
+    return (
+      <button>
+      </button>
+    );
+  }
+}
 
 module.exports = Field;
