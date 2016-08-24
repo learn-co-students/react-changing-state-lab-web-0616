@@ -30,7 +30,7 @@ class Game extends React.Component {
 
   handleClick (i, ev) {
     ev.preventDefault();
-    const board = this.state.board.slice()
+    const board = this.state.board.slice();
     board.splice(i, 1, this.state.turn);
     const turn = this.state.turn === 'X' ? 'O' : 'X';
     this.setState({ board, turn });
