@@ -2,6 +2,7 @@ const React = require('react');
 const { shallow } = require('enzyme');
 const sinon = require('sinon');
 const Status = require('../components/Status');
+const Board = require('../components/Board');
 const Game = require('../components/Game');
 
 describe('<Game />', function () {
@@ -104,5 +105,82 @@ describe('<Game />', function () {
       preventDefault
     });
     sinon.assert.calledOnce(preventDefault);
+  });
+
+  it('should pass `board` state to `<Board />`', function () {
+    const wrapper = shallow(<Game />);
+    expect(wrapper.find(Board).prop('board')).toBe(wrapper.state('board'));
+  });
+
+  it('should have `handleClick` function', function () {
+    const wrapper = shallow(<Game />);
+    expect(typeof wrapper.instance().handleClick).toBe('function');
+  });
+
+  it('should bind `handleClick` handler to `<Board />`', function () {
+    const wrapper = shallow(<Game />);
+    expect(wrapper.find(Board).prop('onClick')).toBe(wrapper.instance().handleClick);
+  });
+
+  it('should `preventDefault()` when clicking on board', function () {
+    const wrapper = shallow(<Game />);
+    const ev = { preventDefault: sinon.spy() };
+    wrapper.find(Board).prop('onClick').call(null, 0, ev);
+    sinon.assert.calledOnce(ev.preventDefault);
+  });
+
+  it('should set current `this.state.turn` on `board[3]` when clicking on 3rd field', function () {
+    const wrapper = shallow(<Game />);
+    const ev = { preventDefault: sinon.stub() };
+    wrapper.find(Board).prop('onClick').call(null, 3, ev);
+    expect(wrapper.state('board')).toEqual([
+      null, null, null,
+      'X', null, null,
+      null, null, null
+    ]);
+  });
+
+  it('should toggle `this.state.turn` between `X` and `O` when clicking on board', function () {
+    const wrapper = shallow(<Game />);
+    const ev = { preventDefault: sinon.stub() };
+    expect(wrapper.state('turn')).toBe('X');
+
+    wrapper.find(Board).prop('onClick').call(null, 1, ev);
+    expect(wrapper.state('turn')).toBe('O');
+
+    wrapper.find(Board).prop('onClick').call(null, 2, ev);
+    expect(wrapper.state('turn')).toBe('X');
+
+    wrapper.find(Board).prop('onClick').call(null, 3, ev);
+    expect(wrapper.state('turn')).toBe('O');
+
+    wrapper.find(Board).prop('onClick').call(null, 4, ev);
+    expect(wrapper.state('turn')).toBe('X');
+  });
+
+  it('should set `board[i]` to `turn` when clicking on `i`th-field', function () {
+    const wrapper = shallow(<Game />);
+    const ev = { preventDefault: sinon.stub() };
+
+    wrapper.find(Board).prop('onClick').call(null, 1, ev);
+    expect(wrapper.state('board')).toEqual([
+      null, 'X', null,
+      null, null, null,
+      null, null, null
+    ]);
+
+    wrapper.find(Board).prop('onClick').call(null, 5, ev);
+    expect(wrapper.state('board')).toEqual([
+      null, 'X', null,
+      null, null, 'O',
+      null, null, null
+    ]);
+
+    wrapper.find(Board).prop('onClick').call(null, 8, ev);
+    expect(wrapper.state('board')).toEqual([
+      null, 'X', null,
+      null, null, 'O',
+      null, null, 'X'
+    ]);
   });
 });
