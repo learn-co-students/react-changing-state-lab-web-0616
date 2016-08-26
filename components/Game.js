@@ -3,29 +3,27 @@ import Board from './Board';
 import Status from './Status';
 import solutions from './solutions';
 
+const INITIAL_STATE = {
+  board: [
+    null, null, null,
+    null, null, null,
+    null, null, null
+  ],
+  turn: 'X'
+}
+
 export default class Game extends React.Component {
   constructor (props) {
     super(props);
-    this.state = Game.getInitialState();
+    this.state = INITIAL_STATE;
 
     this.handleReset = this.handleReset.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  static getInitialState () {
-    return {
-      board: [
-        null, null, null,
-        null, null, null,
-        null, null, null
-      ],
-      turn: 'X'
-    };
-  }
-
   handleReset (ev) {
     ev.preventDefault();
-    this.setState(Game.getInitialState());
+    this.setState(INITIAL_STATE);
   }
 
   handleClick (i, ev) {
