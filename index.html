@@ -4,19 +4,53 @@
     <title>React Changing State Lab</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .board {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #ccc;
+        margin-bottom: 0.5em;
+      }
+
+      .field {
+        height: 100px;
+        width: 100px;
+        border: 1px solid #ccc;
+        padding: 0;
+        background: none;
+        line-height: 1;
+        font-size: 50px;
+      }
+
+      .status {
+        margin-bottom: 0.5em;
+        padding: 0.25em 0.5em;
+        background: #eee;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+    </style>
   </head>
   <body>
     <main id="main">
     </main>
-    <!-- Don't forget to include React dependencies! -->
-    <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
     <script src="node_modules/mocha/mocha.js"></script>
     <script src="node_modules/expect/umd/expect.min.js"></script>
     <script>mocha.setup('bdd');</script>
-    <script src="index.js"></script>
-    <script src="test/index-test.js"></script>
+
+    <script src="bundle.js"></script>
+    <script src="browser-test-bundle.js"></script>
   </body>
 </html>
