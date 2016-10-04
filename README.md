@@ -1,32 +1,18 @@
 # React Changing State Lab
 
-## Objectives
-
-1. Practicing responding to state changes in React
-2. Explain what happens when calling rendering a React component
-
 ## Overview
 
-Continue to ramp up the challenge for students with this lab — we want to be
-pushing the limits of what can be accomplished without breaking state out into
-some kind of flux flow.
+In this lab, you'll implement a Tic Tac Toe game where you will respond to state changes in React amd rendering React components. 
 
 ## Tic-tac-toe
 
-One upon a time, long before Virtual Reality, Pokemon Go and World of Warcraft,
-people used to play games on "physical" paper with "real" pencils. One of those
-games was Tic-tac-toe.
+One upon a time, long before Virtual Reality, Pokemon Go and World of Warcraft, people used to play games on "physical" paper with "real" pencils. One of those games was Tic-tac-toe.
 
 ![TicTacToe](./assets/TicTacToe.png)
 
-Tic-tac-toe is a really simple paper-and-pencil game for two players. Each turn,
-one of the players (**X** or **O**) marks a space in a 3x3 grid. The first
-player to place three marks in a vertical, horizontal, or diagonal row wins.
+Tic-tac-toe is a really simple paper-and-pencil game for two players. Each turn, one of the players (**X** or **O**) marks a space in a 3x3 grid. The first player to place three marks in a vertical, horizontal, or diagonal row wins.
 
-In this lab we're going to implement such a game. Our app should allow us to
-place **X**s and **O**s on the playing field. Once a player succeeds by placing
-three of their marks in a row, an alert should appear and the playing field
-should be reset.
+In this lab we're going to implement such a game. Our app should allow us to place **X**s and **O**s on the playing field. Once a player succeeds by placing three of their marks in a row, an alert should appear and the playing field should be reset.
 
 This is how our final application is going to look like:
 
@@ -36,9 +22,7 @@ There are four different components:
 
 ### `Game.js`
 
-The game component represents the application as a whole. It is the only statful
-component. The initial state of the `Game` component should encode the following
-information:
+The game component represents the application as a whole. It is the only stateful component. The initial state of the `Game` component should encode the following information:
 
 * `board`, e.g. `[null, 'x', null, null, null, null, null, null, null]`
 
@@ -53,13 +37,11 @@ information:
 
 ### `Board.js`
 
-The board component is a pure component. It consists of exactly nine `Field`s
-and accepts the `board` prop. It renders the actual Tic Tac Toe board.
+The board component is a pure component. It consists of exactly nine `Field`s and accepts the `board` prop. It renders the actual Tic Tac Toe board.
 
 ### `Status.js`
 
-The status component can be seen in the above screenshot as the gray box. It
-notifies the user about the current state of the game (Tie / X won / O won).
+The status component can be seen in the above screenshot as the gray box. It notifies the user about the current state of the game (Tie / X won / O won).
 
 ## Resources
 
