@@ -22,7 +22,7 @@ There are four different components:
 
 ### `Game.js`
 
-The game component represents the application as a whole. It is the only statful component. The initial state of the `Game` component should encode the following information:
+The game component represents the application as a whole. It is the only stateful component. The initial state of the `Game` component should encode the following information:
 
 * `board`, e.g. `[null, 'x', null, null, null, null, null, null, null]`
 
