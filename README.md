@@ -8,7 +8,7 @@ In this lab, you'll implement a Tic Tac Toe game where you will respond to state
 
 One upon a time, long before Virtual Reality, Pokemon Go and World of Warcraft, people used to play games on "physical" paper with "real" pencils. One of those games was Tic-tac-toe.
 
-![TicTacToe](./assets/TicTacToe.png)
+![TicTacToe](https://s3.amazonaws.com/learn-verified/react-changing-state-lab-TicTacToe.png)
 
 Tic-tac-toe is a really simple paper-and-pencil game for two players. Each turn, one of the players (**X** or **O**) marks a space in a 3x3 grid. The first player to place three marks in a vertical, horizontal, or diagonal row wins.
 
@@ -16,7 +16,7 @@ In this lab we're going to implement such a game. Our app should allow us to pla
 
 This is how our final application is going to look like:
 
-![Final](./assets/final.png)
+![Final](https://s3.amazonaws.com/learn-verified/react-changing-state-lab-final.png)
 
 There are four different components:
 
