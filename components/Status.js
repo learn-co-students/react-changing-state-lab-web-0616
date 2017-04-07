@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-class Status extends React.Component {
+export default class Status extends React.Component {
   render () {
     const { winner } = this.props;
     return (
@@ -10,5 +10,3 @@ class Status extends React.Component {
     );
   }
 }
-
-module.exports = Status;

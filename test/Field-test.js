@@ -1,7 +1,7 @@
-const React = require('react');
-const { shallow } = require('enzyme');
-const sinon = require('sinon');
-const Field = require('../components/Field');
+import React from 'react';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
+import Field from '../components/Field';
 
 describe('<Field />', function () {
   it('should have .field class', function () {

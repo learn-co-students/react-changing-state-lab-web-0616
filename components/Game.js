@@ -1,7 +1,7 @@
-const React = require('react');
-const Board = require('./Board');
-const Status = require('./Status');
-const solutions = require('./solutions');
+import React from 'react';
+import Board from './Board';
+import Status from './Status';
+import solutions from './solutions';
 
 const INITIAL_STATE = {
   board: [
@@ -12,7 +12,7 @@ const INITIAL_STATE = {
   turn: 'X'
 }
 
-class Game extends React.Component {
+export default class Game extends React.Component {
   constructor (props) {
     super(props);
     this.state = INITIAL_STATE;
@@ -58,5 +58,3 @@ class Game extends React.Component {
     );
   }
 }
-
-module.exports = Game;
