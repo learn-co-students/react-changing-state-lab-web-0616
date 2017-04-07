@@ -1,6 +1,6 @@
-const React = require('react');
-const { shallow } = require('enzyme');
-const Status = require('../components/Status');
+import React from 'react';
+import { shallow } from 'enzyme';
+import Status from '../components/Status';
 
 describe('<Status />', function () {
   it('should have .status class', function () {

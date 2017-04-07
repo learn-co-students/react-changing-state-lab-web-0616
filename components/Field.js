@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-class Field extends React.Component {
+export default class Field extends React.Component {
   render () {
     const { player, onClick } = this.props;
     return (
@@ -9,5 +9,3 @@ class Field extends React.Component {
     );
   }
 }
-
-module.exports = Field;

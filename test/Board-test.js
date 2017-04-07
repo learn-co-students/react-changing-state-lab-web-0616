@@ -1,8 +1,8 @@
-const React = require('react');
-const { shallow } = require('enzyme');
-const sinon = require('sinon');
-const Board = require('../components/Board');
-const Field = require('../components/Field');
+import React from 'react';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
+import Board from '../components/Board';
+import Field from '../components/Field';
 
 describe('<Board />', function () {
   it('should have .board class', function () {

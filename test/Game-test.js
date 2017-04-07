@@ -1,9 +1,9 @@
-const React = require('react');
-const { shallow } = require('enzyme');
-const sinon = require('sinon');
-const Status = require('../components/Status');
-const Board = require('../components/Board');
-const Game = require('../components/Game');
+import React from 'react';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
+import Status from '../components/Status';
+import Board from '../components/Board';
+import Game from '../components/Game';
 
 describe('<Game />', function () {
   it('should have .game class', function () {
@@ -19,12 +19,12 @@ describe('<Game />', function () {
       null, null, null
     ]);
   });
-  
+
   it('should have `turn` state', function () {
     const wrapper = shallow(<Game />);
     expect(wrapper.state().turn).toBe('X');
   });
-  
+
   it('should have `turn` state', function () {
     const wrapper = shallow(<Game />);
     expect(wrapper.state().turn).toBe('X');
