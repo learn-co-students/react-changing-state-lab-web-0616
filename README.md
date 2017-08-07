@@ -49,6 +49,6 @@ The status component can be seen in the above screenshot as the gray box. It not
 
 ## Credits
 
-- Tic Tac Toe image by [Symode09](https://commons.wikimedia.org/w/index.php?curid=2064271) — Own work, Public Domain
+- Tic Tac Toe image by [Symode09](https://commons.wikimedia.org/w/index.php?curid=2064271)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/react-changing-state-lab'>Changing State Lab</a> on Learn.co and start learning to code for free.</p>
