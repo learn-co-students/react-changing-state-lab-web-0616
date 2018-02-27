@@ -5,4 +5,4 @@ import ReactDOM from 'react-dom';
 const $main = document.getElementById('main');
 ReactDOM.render(<Game />, $main);
 
-require('./test/index-test.js'); // Leave this in!
+// require('./test/index-test.js'); // Leave this in!
